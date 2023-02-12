@@ -26,8 +26,12 @@ import {
   ColorMappingChart,
 } from './Charts';
 
+import { useStateContext } from './Contexts/ContextProvider';
+
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
+
+  console.log({ activeMenu });
   return (
     // Main Content Div
     <div>
@@ -77,7 +81,7 @@ const App = () => {
               {/* Pages */}
               <Route path='/orders' element={<Orders />} />
               <Route path='/employees' element={<Employees />} />
-              <Route path='/customers' element={<Customers/>} />
+              <Route path='/customers' element={<Customers />} />
 
               {/* Apps */}
               <Route path='/kanban' element={<Kanban />} />
