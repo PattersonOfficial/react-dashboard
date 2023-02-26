@@ -15,10 +15,9 @@ export const ContextProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
 
-  // function calls and declarations
   // functionality to handle navbar component clicks
-  const handleClick = (click) => {
-    setIsClicked({ ...initialState, [click]: true });
+  const handleClick = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: true });
   };
 
   return (

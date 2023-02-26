@@ -31,7 +31,6 @@ import { useStateContext } from './Contexts/ContextProvider';
 const App = () => {
   const { activeMenu } = useStateContext();
 
-  console.log({ activeMenu });
   return (
     // Main Content Div
     <div>
@@ -69,37 +68,37 @@ const App = () => {
             <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
               <Navbar />
             </div>
-          </div>
 
-          {/* Main Routes */}
-          <div>
-            <Routes>
-              {/* Dashboard */}
-              <Route exact path='/' element={<Ecommerce />} />
-              <Route path='/ecommerce' element={<Ecommerce />} />
+            {/* Main Routes */}
+            <div>
+              <Routes>
+                {/* Dashboard */}
+                <Route exact path='/' element={<Ecommerce />} />
+                <Route path='/ecommerce' element={<Ecommerce />} />
 
-              {/* Pages */}
-              <Route path='/orders' element={<Orders />} />
-              <Route path='/employees' element={<Employees />} />
-              <Route path='/customers' element={<Customers />} />
+                {/* Pages */}
+                <Route path='/orders' element={<Orders />} />
+                <Route path='/employees' element={<Employees />} />
+                <Route path='/customers' element={<Customers />} />
 
-              {/* Apps */}
-              <Route path='/kanban' element={<Kanban />} />
-              <Route path='/editor' element={<Editor />} />
-              <Route path='/calendar' element={<Calender />} />
-              <Route path='/color-picker' element={<ColorPicker />} />
+                {/* Apps */}
+                <Route path='/kanban' element={<Kanban />} />
+                <Route path='/editor' element={<Editor />} />
+                <Route path='/calendar' element={<Calender />} />
+                <Route path='/color-picker' element={<ColorPicker />} />
 
-              {/* Charts */}
-              <Route path='/bar' element={<BarChart />} />
-              <Route path='/pie' element={<PieChart />} />
-              <Route path='/line' element={<LineChart />} />
-              <Route path='/area' element={<AreaChart />} />
-              <Route path='/stacked' element={<StackedChart />} />
-              <Route path='/pyramid' element={<PyramidChart />} />
-              <Route path='/financial' element={<FinancialChart />} />
-              <Route path='/sparked-line' element={<SparkLineChart />} />
-              <Route path='/color-mapping' element={<ColorMappingChart />} />
-            </Routes>
+                {/* Charts */}
+                <Route path='/bar' element={<BarChart />} />
+                <Route path='/pie' element={<PieChart />} />
+                <Route path='/line' element={<LineChart />} />
+                <Route path='/area' element={<AreaChart />} />
+                <Route path='/stacked' element={<StackedChart />} />
+                <Route path='/pyramid' element={<PyramidChart />} />
+                <Route path='/financial' element={<FinancialChart />} />
+                <Route path='/sparked-line' element={<SparkLineChart />} />
+                <Route path='/color-mapping' element={<ColorMappingChart />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>
